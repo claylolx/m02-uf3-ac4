@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Usuario</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Aplicació web amb base de dades (M02-UF3-AC4)</h1>
+    </header>
+    <main>
+        <form action="{{ url_for('newUser') }}" method="POST" class="formulario">
+            <h2>Registro de usuario</h2>
+            <input type="text" name="usuario" placeholder="Nombre de usuario" required>
+            <input type="password" name="contrasena" placeholder="Contraseña" required>
+            <input type="text" name="nombre" placeholder="Nombre" required>
+            <input type="text" name="apellido1" placeholder="Primer apellido" required>
+            <input type="text" name="apellido2" placeholder="Segundo apellido" required>
+            <input type="number" name="edad" placeholder="Edad" required>
+            <input type="number" name="salario" placeholder="Salario" required>
+            <input type="submit" value="Registrar">
+        </form>        
+    </main>
+    <footer>
+        <p>ETPX 2022-2023</p>
+    </footer>
+</body>
+</html>
